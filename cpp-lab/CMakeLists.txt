@@ -12,7 +12,6 @@ endif()
 add_compile_options(-Wall -Wextra -Wpedantic)
 
 # Each numbered module is added as it gains buildable sources.
-add_subdirectory(01_basics)
 add_subdirectory(02_stl)
 add_subdirectory(03_oop)
 add_subdirectory(04_templates)

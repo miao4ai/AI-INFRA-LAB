@@ -16,8 +16,10 @@ Makefile
 *.dylib
 *.exe
 
-# Compiled executables without extension (e.g. cpp-lab/start/test)
+# Compiled executables without extension (e.g. cpp-lab/start/{test,app,start})
 cpp-lab/start/test
+cpp-lab/start/app
+cpp-lab/start/start
 
 # macOS
 .DS_Store
