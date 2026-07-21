@@ -1,0 +1,23 @@
+# Build directories
+build/
+cmake-build-*/
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+
+# Compiled executables without extension (e.g. cpp-lab/start/test)
+cpp-lab/start/test
+
+# macOS
+.DS_Store
