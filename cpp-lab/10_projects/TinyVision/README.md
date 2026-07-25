@@ -6,7 +6,7 @@ TinyVision is **not** meant to replace OpenCV. Its goal is to master modern C++2
 — RAII, move semantics, templates, ranges, concepts, and concurrency — by
 implementing a small but well-architected image library from scratch.
 
-See [documents/project.md](documents/project.md) for the full goals, roadmap, and
+See [docs/project.md](docs/project.md) for the full goals, roadmap, and
 design philosophy.
 
 ## Layout
