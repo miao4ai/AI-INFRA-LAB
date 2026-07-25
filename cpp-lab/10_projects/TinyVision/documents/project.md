@@ -82,43 +82,76 @@ Documentation:
 
 # Project Structure
 
-The project is organized by feature module rather than by a flat
-include/src split. Each module owns its own headers, sources, and
-`CMakeLists.txt`, and builds on the modules above it.
+The project uses a conventional `include/` + `src/` split. Public headers
+live under `include/tinyvision/`, grouped by module; implementations mirror
+that layout under `src/`.
 
 ```text
 TinyVision/
 │
 ├── CMakeLists.txt
+├── README.md
+├── LICENSE
 │
-├── core/                # Foundational value types
-│   ├── Image
-│   ├── ImageView
-│   ├── Pixel
-│   ├── Region
-│   └── Buffer
+├── include/
+│   └── tinyvision/
+│       ├── core/               # Foundational value types
+│       │   ├── Image.hpp
+│       │   ├── ImageView.hpp
+│       │   ├── Buffer.hpp
+│       │   ├── Pixel.hpp
+│       │   ├── Rect.hpp
+│       │   └── Color.hpp
+│       │
+│       ├── io/                 # Image loading / saving
+│       │   ├── ImageReader.hpp
+│       │   ├── ImageWriter.hpp
+│       │   └── PPM.hpp
+│       │
+│       ├── processing/         # Image operations & algorithms
+│       │   ├── Resize.hpp
+│       │   ├── Blur.hpp
+│       │   ├── Gray.hpp
+│       │   ├── Histogram.hpp
+│       │   ├── Threshold.hpp
+│       │   └── Sobel.hpp
+│       │
+│       ├── pipeline/           # Composition of filters
+│       │   ├── Pipeline.hpp
+│       │   └── Filter.hpp
+│       │
+│       └── utils/              # Cross-cutting helpers
+│           ├── Timer.hpp
+│           ├── Logger.hpp
+│           └── Assert.hpp
 │
-├── io/                  # Image loading / saving
-│   ├── ppm
-│   └── png              # (later)
+├── src/                        # Implementations (mirrors include/)
+│   ├── core/
+│   ├── io/
+│   ├── processing/
+│   ├── pipeline/
+│   └── utils/
 │
-├── filters/             # Image operations & algorithms
-│   ├── blur
-│   ├── resize
-│   ├── sobel
-│   └── histogram
+├── examples/                   # Lesson programs & demos
+│   ├── lesson01_image.cpp
+│   ├── lesson02_ppm.cpp
+│   ├── lesson03_resize.cpp
+│   ├── lesson04_blur.cpp
+│   └── pipeline_demo.cpp
 │
-├── pipeline/            # Composition of filters into pipelines
+├── tests/                      # GoogleTest unit tests
 │
-├── benchmark/           # Google Benchmark suites
+├── benchmark/                  # Google Benchmark suites
 │
-├── tests/               # GoogleTest unit tests
+├── docs/                       # Documentation
 │
-└── examples/            # Example programs
+└── assets/                     # Sample images
+    ├── input/
+    └── output/
 ```
 
-Dependency direction: `core` ← `io`, `filters` ← `pipeline`.
-Lower layers never depend on higher ones.
+Dependency direction: `core` ← `io`, `processing` ← `pipeline`; `utils` is
+shared. Lower layers never depend on higher ones.
 
 The project should follow modern CMake conventions.
 
