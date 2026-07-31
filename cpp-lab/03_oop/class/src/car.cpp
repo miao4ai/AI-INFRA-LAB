@@ -3,10 +3,7 @@
 using namespace std;
 
 Car::Car(){
-    fuel = 0;
-    speed = 0;
-    passengers = 0;
-    cout<<"Constructor!"<<endl;
+ 
 }
 
 Car::~Car(){
