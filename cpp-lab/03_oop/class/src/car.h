@@ -5,6 +5,7 @@ private:
     float fuel {0};
     float speed {0};
     int passengers {0};
+    static int totalCount;
 
 
 public:

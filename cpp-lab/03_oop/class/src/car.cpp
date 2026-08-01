@@ -2,12 +2,15 @@
 #include <iostream>
 using namespace std;
 
+int Car::totalCount = 0;
+
 Car::Car(){
- 
+    ++totalCount;
 }
 
 Car::~Car(){
     cout<<"Destructor!"<<endl;
+
 }
 
 void Car::FillFuel(float amount){
@@ -22,4 +25,5 @@ void Car::Accelerate(){
 void Car::Dashboard(){
     cout<<"Speed: "<<speed<<endl;
     cout<<"Fuel: "<<fuel<<endl;
+    cout<<"Car count: "<<totalCount<<endl;
 }
