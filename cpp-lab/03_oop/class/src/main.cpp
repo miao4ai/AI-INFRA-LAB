@@ -6,5 +6,6 @@ int main(){
     car.Accelerate();
     car.Accelerate(); 
     car.Dashboard();
+    Car::ShowCount();
     return 0;
 }

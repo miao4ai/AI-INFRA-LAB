@@ -25,5 +25,8 @@ void Car::Accelerate(){
 void Car::Dashboard(){
     cout<<"Speed: "<<speed<<endl;
     cout<<"Fuel: "<<fuel<<endl;
+}
+
+void Car::ShowCount(){
     cout<<"Car count: "<<totalCount<<endl;
 }
