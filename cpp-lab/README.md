@@ -30,6 +30,25 @@ cpp-lab
 
 ---
 
+## Project Roadmap
+
+Six projects under `10_projects/`, each targeting one layer of the modern C++ /
+AI-infra stack. Every phase builds on the previous ones and converges on a mini
+inference runtime.
+
+| Phase   | Project             | Core Goal                                              |
+| ------- | ------------------- | ------------------------------------------------------ |
+| Phase 1 | **TinyVision**      | Modern C++ (classes, RAII, move, templates, STL)       |
+| Phase 2 | **TinyMemory**      | Resource management (allocators, memory pool, alignment) |
+| Phase 3 | **TinyScheduler**   | Concurrency (thread pool, futures, task scheduler)     |
+| Phase 4 | **TinyLinear**      | Numerical computing (matrix, SIMD, cache, BLAS ideas)  |
+| Phase 5 | **TinyInfer**       | Integrate phases 1–4 into a mini inference runtime     |
+| Phase 6 | **TinyDistributed** | Distributed execution (MPI, Ray, Spark, cluster scheduling) |
+
+> **Target: 3 months. 坚信能完成 💪**
+
+---
+
 ## Build
 
 Requires CMake 3.20+ and a C++20 compiler (GCC 11+, Clang 13+, or MSVC 19.29+).
