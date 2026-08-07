@@ -11,8 +11,10 @@ Integer Add(const Integer &a, const Integer &b){
     return temp;
 }
 int main(){
-    Integer a(1),b(3);
-    a.SetValue(Add(a,b).GetValue());
-    Integer c = Add(3,5);
+    //Integer a(1),b(3);
+    //a.SetValue(Add(a,b).GetValue());
+    //Integer c = Add(3,5);
+    Integer a(1);
+    Integer b{std::move(a)};
     return 0;
 }
