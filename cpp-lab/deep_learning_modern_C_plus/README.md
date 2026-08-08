@@ -21,7 +21,7 @@ fine. Chapters 14–17 feed the CV/Jetson project directly, so slow down and mil
 
 ## Progress
 
-- [ ] **Ch 01** — Introduction to Deep Learning Programming *(read-only, no code folder)*
+- [ ] **Ch 01** — Introduction to Deep Learning Programming  → exercises: product, convolution, op-count
 - [ ] **Ch 02** — Coding Deep Learning with Modern C++  → C++ setup, Eigen, value/move semantics
 - [ ] **Ch 03** — Testing Deep Learning Code  → unit testing habits
 - [ ] **Ch 04** — Implementing Convolutions  → the core CV op
@@ -41,7 +41,8 @@ fine. Chapters 14–17 feed the CV/Jetson project directly, so slow down and mil
 
 ## How I use this
 
-- One folder per chapter (`Chapter 02` … `Chapter 17`), matching the book repo's names.
+- One folder per chapter (`chapter-01` … `chapter-17`) — hyphenated/lowercase for
+  easy command-line use (the book repo uses `Chapter NN` with a space).
 - I write my **own** code/notes in each folder as I go — no copying from the book repo.
 - Each chapter is a small "assignment"; the CV chapters (14–17) tie into the
   Jetson drone-detection project.
