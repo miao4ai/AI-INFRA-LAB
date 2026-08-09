@@ -14,6 +14,12 @@
 ![0-9][0-9]_*/*/*.*
 ![0-9][0-9]_*/*/*/
 
+# Same idea for the Deep Learning course exercises:
+#   deep_learning_modern_C_plus/chapter-NN/exM_name/<binary>
+deep_learning_modern_C_plus/chapter-*/*/*
+!deep_learning_modern_C_plus/chapter-*/*/*.*
+!deep_learning_modern_C_plus/chapter-*/*/*/
+
 # ======================================================================
 # Build artifacts — listed AFTER the block above so they take precedence
 # over the "re-include anything with a dot" rule and stay ignored.
