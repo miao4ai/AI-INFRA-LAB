@@ -11,7 +11,6 @@ public:
     int GetValue() const;
     void SetValue(int value);
     ~Integer();
-
     Integer operator +(const Integer & a) const;
-
+    bool operator ==(const Integer &a) const;
 };
