@@ -33,3 +33,15 @@ Integer Integer::operator+(const Integer & a) const{
     *temp.m_pInt = *m_pInt + *a.m_pInt;
     return temp;
 }
+
+bool Integer::operator==(const Integer &a) const{
+    return *m_pInt == *a.m_pInt;
+}
+
+Integer & Integer::operator=(const Integer &obj){
+    if (this != &obj){
+        delete m_pInt;
+        m_pInt = new int(*obj.m_pInt);
+    }
+    return *this;
+}

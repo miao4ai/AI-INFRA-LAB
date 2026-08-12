@@ -3,7 +3,9 @@
 
 int main(){
     Integer a(1),b(3);
-    Integer sum = a+b;
-    std::cout<<sum.GetValue()<<std::endl;
+    Integer c;
+    c=a;
+    //Integer sum = a+b;
+    std::cout<<c.GetValue()<<std::endl;
     return 0;
 }

@@ -13,4 +13,5 @@ public:
     ~Integer();
     Integer operator +(const Integer & a) const;
     bool operator ==(const Integer &a) const;
+    Integer & operator = (const Integer &obj);
 };
